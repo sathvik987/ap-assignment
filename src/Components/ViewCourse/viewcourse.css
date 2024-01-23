@@ -96,7 +96,8 @@
 
 .svelte {
     height: 2em;
-    width: 3.7em;
+    min-width: 3.7em;
+    max-width: 5em;
     margin-bottom: 1.5em;
     position: relative;
     display: flex;
