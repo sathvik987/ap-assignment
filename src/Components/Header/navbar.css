@@ -1,0 +1,221 @@
+.nav-bar {
+    width: 100%;
+    background-color: rgb(210, 65, 21);
+    height: 3em;
+    color: white;
+}
+
+.nav-bar .nav-link {
+    color: white;
+}
+
+.nav-bar .dropdown-menu {
+    margin: 8px;
+}
+
+.nav-bar .dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: rgb(255, 237, 213);
+}
+
+.logo {
+    height: 2em;
+    margin-left: 1em;
+}
+
+.language {
+    position: absolute;
+    top: 0.7em;
+    margin-left: -1em;
+}
+
+.nav-right {
+    position: absolute;
+    right: 1em;
+}
+
+.icon {
+    font-size: 1.2em;
+}
+
+.donate {
+    display: none;
+    margin-right: 2em;
+}
+
+.donate-btn {
+    padding: 0.1em 0.7em;
+}
+
+.menu-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    height: 100%;
+    background: rgb(51, 65, 85);
+    z-index: 100;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    opacity: .6;
+
+}
+
+.menu {
+    padding: 1em;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    overflow: scroll;
+    width: 25%;
+    background: white;
+    z-index: 200;
+    background-color: white;
+}
+
+.menu-close-btn {
+    height: 32px;
+    width: 32px;
+    position: absolute;
+    color: red;
+    right: 0px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin-left: -2em;
+}
+
+.menu li {
+    cursor: pointer;
+    margin: 0.3em;
+    padding: 0.3em;
+    border-radius: 10px;
+}
+
+.menu li:hover {
+    background-color: rgb(241, 245, 249);
+}
+
+.mobile-menu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    padding: 1em;
+    z-index: 200;
+    background-color: rgb(210, 65, 21);
+    top: 0px;
+    font-size: 1em;
+    color: white;
+}
+
+.mobile-menu ul {
+    list-style-type: none;
+    margin-left: -2.5em;
+}
+
+.mobile-menu li {
+    cursor: pointer;
+    margin: 0.3em;
+    padding: 0.3em;
+    border-radius: 10px;
+    font-size: 1em;
+    color: white;
+}
+
+.mobile-menu-contents {
+    font-weight: 600;
+    font-size: 1.2em;
+    margin-left: -2em !important;
+}
+
+.mobile-menu-close-btn {
+    color: white;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.mobile-menu-login-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-menu-div {
+    margin-top: 2em;
+    height: 90%;
+    overflow-y: scroll;
+}
+
+.mobile-menu hr {
+    border: 1px solid white;
+}
+
+.login-icon {
+    color: rgb(234, 88, 12);
+    font-size: 2.5em;
+}
+
+.login-div {
+    display: flex;
+    align-items: center;
+    color: rgb(234, 88, 12);
+    cursor: pointer;
+}
+
+.social-media-icons {
+    font-size: 1.5em !important;
+    margin: -0.3em 0.3em !important;
+    padding: 0.1em 0.3em !important;
+}
+
+.social-media-icons svg {
+    margin-right: 1em;
+}
+
+.store {
+    height: 40px;
+    cursor: pointer;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.small {
+    font-size: 0.8em;
+}
+
+
+@media (max-width: 1220px) {
+    .nav-bar {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 1060px) {
+    .nav-bar {
+        font-size: 15px;
+    }
+
+    .nav-left {
+        display: none;
+    }
+
+    .donate {
+        display: block;
+    }
+
+    .menu-text {
+        display: none;
+    }
+
+    .phone-icon {
+        display: none;
+    }
+}

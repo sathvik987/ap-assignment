@@ -1,0 +1,208 @@
+.home-btn {
+    cursor: pointer;
+    color: rgb(71, 85, 105);
+}
+
+.home-btn:hover {
+    color: rgb(210, 65, 21);
+}
+
+.go-to-home {
+    display: inline-block;
+}
+
+.go-to-home-mobile {
+    display: none;
+}
+
+.course-title {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-top: 0.5em;
+}
+
+.home-btn-arrow {
+    color: rgb(210, 65, 21);
+    cursor: pointer;
+}
+
+.course-image {
+    width: 100%;
+    max-height: 35em;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 0.4em;
+}
+
+.share {
+    margin-right: 1em;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.share-icons {
+    margin-top: 1em;
+}
+
+.videos-title {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.video-title {
+    font-size: 1.2em;
+}
+
+.video-info {
+    font-size: 0.8em;
+    color: rgb(71, 85, 105);
+}
+
+.video-language {
+    text-transform: capitalize;
+    background-color: rgb(199, 230, 248);
+    display: inline-block;
+    padding: 0em 0.7em;
+    border-radius: 0.2em;
+    margin-top: 1em;
+}
+
+.video-details {
+    cursor: pointer;
+    padding: 1.5em;
+    border-radius: 0.5em;
+}
+
+.add-to-cart {
+    margin-top: 1em;
+}
+
+.add-to-cart .btns {
+    color: rgb(234, 88, 12);
+}
+
+.add-to-cart .btns:hover {
+    color: rgb(194 45 1);
+}
+
+.btn-seperator {
+    margin: 0em 0.3em;
+    position: relative;
+    bottom: 0.2em;
+}
+
+.svelte {
+    height: 2em;
+    width: 3.7em;
+    margin-bottom: 1.5em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.25rem;
+    background-color: rgb(148 163 184);
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    text-align: center;
+    font-size: .75rem;
+    line-height: 1rem;
+    font-weight: 500;
+    color: rgb(255 255 255);
+}
+
+.svelte:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 0;
+    width: 0;
+    border-top: 12px solid transparent;
+    border-right: 5px solid white;
+    border-bottom: 12px solid transparent;
+}
+
+.video-details:hover {
+    background-color: rgb(241 245 249);
+}
+
+.faqs-row {
+    margin: 0em 3em;
+    padding-top: 4em;
+}
+
+.faqs-parent {
+    position: relative;
+    left: -2em;
+    width: 100vw;
+    background-image: linear-gradient(rgb(248, 250, 252), rgba(248, 250, 252, 0));
+}
+
+.support {
+    color: #DD6B20;
+    cursor: pointer;
+}
+
+.faqs {
+    margin-bottom: 4em;
+}
+
+.faqs .accordion-button {
+    background: #f9fafc00;
+    box-shadow: none;
+    border: none;
+    padding-left: 0em;
+}
+
+.faqs .accordion-body {
+    padding-left: 0em;
+}
+
+.faqs .accordion-item {
+    background: #f9fafc00;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid lightgray;
+    border-radius: 0px;
+}
+
+.faqs .accordion-button {
+    font-weight: 600;
+}
+
+.faqs a {
+    color: rgb(210 65 21);
+    text-decoration: none;
+}
+
+
+@media (max-width: 1060px) {
+    .go-to-home {
+        display: none;
+    }
+
+    .go-to-home-mobile {
+        display: inline-block;
+    }
+
+    .course-title {
+        display: none;
+    }
+
+    .share-icons {
+        display: none;
+    }
+
+    .faqs-row {
+        margin: 0em 0em;
+    }
+
+    .faqs {
+        margin-top: 2em;
+    }
+
+}
