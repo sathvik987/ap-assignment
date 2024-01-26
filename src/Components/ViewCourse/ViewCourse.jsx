@@ -7,15 +7,18 @@ import { faTwitter, faFacebook, faWhatsapp, faLinkedin } from '@fortawesome/free
 import "./viewcourse.css";
 import { useEffect, useState } from 'react';
 
-function ViewCourse() {
+function ViewCourse(props) {
 
     const [course, setCourse] = useState({});
     const [faqs, setFaqs] = useState([]);
 
     useEffect(() => {
         fetchCourse();
-        fetchFaqs();
     }, []);
+
+    useEffect(() => {
+        fetchFaqs();
+    }, [props.language]);
 
     const fetchCourse = async () => {
         try {
@@ -28,7 +31,7 @@ function ViewCourse() {
 
     const fetchFaqs = async () => {
         try {
-            let res = await (await fetch("https://api.acharyaprashant.org/v2/legacy/courses/faqs?language=english")).json();
+            let res = await (await fetch(`https://api.acharyaprashant.org/v2/legacy/courses/faqs?language=${props.language}`)).json();
             setFaqs(res);
         } catch (error) {
             console.log(error);

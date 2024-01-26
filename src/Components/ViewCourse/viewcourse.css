@@ -180,6 +180,10 @@
     text-decoration: none;
 }
 
+.faqs .accordion-button:not(.collapsed) {
+    color: black
+}
+
 
 @media (max-width: 1060px) {
     .go-to-home {

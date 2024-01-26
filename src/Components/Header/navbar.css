@@ -167,6 +167,10 @@
     cursor: pointer;
 }
 
+.active-class {
+    color: rgb(234, 88, 12);
+}
+
 .social-media-icons {
     font-size: 1.5em !important;
     margin: -0.3em 0.3em !important;

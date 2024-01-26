@@ -12,7 +12,7 @@ import Button from 'react-bootstrap/Button';
 
 
 
-function NavBar() {
+function NavBar(props) {
     const [showMenu, toggleShowMenu] = useState(false);
     const [showMobileMenu, toggleShowMobileMenu] = useState(false);
 
@@ -87,19 +87,26 @@ function NavBar() {
                         <Nav.Link>  <Button variant="outline-light" className='donate-btn' size="sm">Donate</Button>{' '} </Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                        <svg
-                            className='language'
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="28"
-                            height="21"
-                            viewBox="0 0 28 21"
-                            fill="white"
-                        >
-                            <path d="M24.193 0c1.27 0 2.22.301 2.855.904.59.56.905 1.372.947 2.437l.005.25v13.817c0 1.19-.317 2.085-.952 2.688-.589.56-1.452.86-2.588.9l-.267.004H3.807c-1.252 0-2.2-.301-2.843-.904-.597-.56-.916-1.372-.96-2.437L0 17.409V3.591C0 2.402.321 1.507.964.904c.597-.56 1.457-.86 2.58-.9L3.806 0h20.386Zm.435 1.5H3.346c-.598 0-1.055.153-1.371.458-.282.271-.438.66-.47 1.166l-.005.195v14.375c0 .593.158 1.043.475 1.348.281.271.673.422 1.177.452l.194.006h21.282c.597 0 1.059-.153 1.384-.458.29-.271.45-.657.482-1.156l.006-.192V3.319c0-.602-.163-1.056-.488-1.361-.325-.305-.787-.458-1.384-.458ZM11.905 5.559v1.6H7.511v2.533h4.128v1.498H7.511v2.65h4.394v1.599h-6.32v-9.88h6.32Zm3.236 0 4.35 6.572h.065V5.559h1.812v9.88h-1.61L15.391 8.83h-.057v6.609h-1.812v-9.88h1.618Z"></path>
-                        </svg>
+                        {
+                            props.language === 'hindi' ?
+                                <svg className='language' xmlns="http://www.w3.org/2000/svg" width="28" height="21" viewBox="0 0 28 21" fill='white'>
+                                    <path d="M9.84 5.559v4.017h4.274V5.559h2.02v9.88h-2.02v-4.234H9.84v4.234H7.827v-9.88h2.014Zm10.3 0v9.88h-2.014v-9.88h2.013ZM3.806 21h20.386c1.27 0 2.22-.301 2.855-.904.635-.603.952-1.499.952-2.688V3.592c0-1.19-.317-2.085-.952-2.688C26.414.3 25.462 0 24.193 0H3.807C2.555 0 1.607.301.964.904.321 1.507 0 2.403 0 3.592v13.816c0 1.19.321 2.085.964 2.688.643.603 1.59.904 2.843.904Zm-.461-1.5c-.598 0-1.055-.153-1.371-.458-.317-.305-.475-.755-.475-1.348V3.319c0-.602.158-1.056.475-1.361.316-.305.773-.458 1.371-.458h21.282c.597 0 1.059.153 1.384.458.325.305.488.759.488 1.361v14.375c0 .593-.163 1.043-.488 1.348-.325.305-.787.458-1.384.458H3.346Z"></path>
+                                </svg> :
+                                <svg
+                                    className='language'
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="28"
+                                    height="21"
+                                    viewBox="0 0 28 21"
+                                    fill="white"
+                                >
+                                    <path d="M24.193 0c1.27 0 2.22.301 2.855.904.59.56.905 1.372.947 2.437l.005.25v13.817c0 1.19-.317 2.085-.952 2.688-.589.56-1.452.86-2.588.9l-.267.004H3.807c-1.252 0-2.2-.301-2.843-.904-.597-.56-.916-1.372-.96-2.437L0 17.409V3.591C0 2.402.321 1.507.964.904c.597-.56 1.457-.86 2.58-.9L3.806 0h20.386Zm.435 1.5H3.346c-.598 0-1.055.153-1.371.458-.282.271-.438.66-.47 1.166l-.005.195v14.375c0 .593.158 1.043.475 1.348.281.271.673.422 1.177.452l.194.006h21.282c.597 0 1.059-.153 1.384-.458.29-.271.45-.657.482-1.156l.006-.192V3.319c0-.602-.163-1.056-.488-1.361-.325-.305-.787-.458-1.384-.458ZM11.905 5.559v1.6H7.511v2.533h4.128v1.498H7.511v2.65h4.394v1.599h-6.32v-9.88h6.32Zm3.236 0 4.35 6.572h.065V5.559h1.812v9.88h-1.61L15.391 8.83h-.057v6.609h-1.812v-9.88h1.618Z"></path>
+                                </svg>
+
+                        }
                         <NavDropdown title="" >
-                            <NavDropdown.Item>हिन्दी</NavDropdown.Item>
-                            <NavDropdown.Item>English</NavDropdown.Item>
+                            <NavDropdown.Item className={`${props.language === 'hindi' ? 'active-class' : ''}`} onClick={() => props.setLanguage("hindi")}>हिन्दी</NavDropdown.Item>
+                            <NavDropdown.Item className={`${props.language === 'english' ? 'active-class' : ''}`} onClick={() => props.setLanguage("english")}>English</NavDropdown.Item>
                         </NavDropdown>
                     </Nav.Item>
 
@@ -191,12 +198,12 @@ function NavBar() {
                             </div>
 
                             <ul>
-                                <li>Vedant - Upanishads</li>
-                                <li>Vedant - Bhagavad Gitas</li>
-                                <li>Other Scriptures</li>
-                                <li>Saints and Masters</li>
-                                <li>Other streams</li>
-                                <li>Life Questions</li>
+                                <li>{props.getTagName(1)}</li>
+                                <li>{props.getTagName(2)}</li>
+                                <li>{props.getTagName(3)}</li>
+                                <li>{props.getTagName(4)}</li>
+                                <li>{props.getTagName(5)}</li>
+                                <li>{props.getTagName(6)}</li>
                                 <li>Technical Support</li>
                             </ul>
                         </div>
